@@ -1,0 +1,292 @@
+/* Reset dei margini e dei padding per il layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  	background-color: #9195c6; /* Sfondo della pagina */
+  	color: #1c0e3a; /* Colore del testo principale */
+  	margin: 0;
+    padding: 0;
+  	align-items: center;
+  	justify-content: center;
+}
+
+.log-container{
+	min-height: 100vh;
+}
+
+#emailInput:focus {
+    outline: none;
+    border: 2px solid #BFC2DE;
+    background-color: #6368ad26;
+    border-radius: 5px;
+}
+
+#passwordInput:focus {
+    outline: none;
+    border: 2px solid #BFC2DE;
+    background-color: #6368ad26;
+    border-radius: 5px;
+}
+
+.main-wrapper{
+	display:flex;
+	justify-content: center;
+}
+/* Wrapper per centrare il contenuto */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding:20px;
+  margin: 130px 0;
+  background-color: #ffffff; /* Sfondo del container di login */
+  border-radius: 8px;
+  position:relative;
+ 
+}
+	
+  .container {
+    display: block; /* Mostra il container su desktop */
+    margin-right: 40px;
+  }
+
+/* Stile per il logo nella parte superiore */
+.text-logo {
+  color: #7e1b10; /* Colore del logo */
+  font-size: 2rem; /* Dimensione del logo */
+  text-align: center; /* Allinea il testo al centro */
+}
+
+
+
+/* Stile per la sezione di login */
+.login-section {
+  width: 50%;
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fffff; /* Sfondo del container di login */
+  border-radius: 8px;
+  text-align: center; /* Allinea il testo al centro */
+}
+
+/* Stile per il titolo "Accedi" */
+.login-section .form-box.login h2 {
+  color: #1c0e3a;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center; /* Allinea il testo al centro */
+}
+
+/* Stile per le caselle di input */
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center; /* Allinea il testo al centro */
+  border: 1px solid #BFC2DE;
+  border-radius: 5px;
+  display:flex;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 16px;
+  padding-right: 60px;
+  border: none;
+  background-color: transparent; /* Sfondo dei campi di testo */
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-box .icon img {
+  width: 40px; 
+  height: 40px; /* Dimensione ancora pi� grande per le icone */
+}
+
+/* Stile per il bottone Accedi */
+.btn {
+  background-color: #1c0e3a; /* Colore di sfondo del bottone */
+  color: #ffffff; /* Colore del testo del bottone */
+  border: none;
+  padding: 16px 32px; /* Aumenta il padding per adattarsi alle icone pi� grandi */
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #7e1b10; /* Cambia colore al passaggio del mouse */
+}
+
+/* Stile per il link per creare un nuovo account */
+.create-account {
+  margin-top: 10px;
+  text-align: center; /* Allinea il testo al centro */
+}
+
+.create-account p {
+  color: #1c0e3a;
+}
+
+.create-account a {
+  color: #1c0e3a;
+  text-decoration: underline;
+  font-weight: bold; /* Rendi il testo in grassetto */
+}
+
+.create-account a:hover {
+  color: #7e1b10;
+}
+
+/* Stile per il popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+}
+
+.popup-content button {
+  background-color: #1c0e3a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 7px;
+}
+
+.popup-content button:hover {
+  background-color: #7e1b10;
+}
+
+.close {
+    position: absolute;
+    top: -2px;
+    right: 9px;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 669px) {
+
+.main-wrapper{
+	background-color: transparent !important;
+}
+	
+/* Wrapper per centrare il contenuto */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding:20px;
+  margin: 20px 0;
+  background-color: transparent; /* Sfondo del container di login */
+  border-radius: 8px;
+  position:relative;
+ 
+}
+	
+  .container {
+    display: none; /* Mostra il container su desktop */
+   
+  }
+
+/* Stile per la sezione di login */
+.login-section {
+  width: 75%;
+  
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white !important; /* Sfondo del container di login */
+  border-radius: 8px;
+  text-align: center; /* Allinea il testo al centro */
+}
+
+	.input-box .icon img {
+  		width: 30px; /* Dimensione ancora pi� grande per le icone */
+  		height: 30px; /* Dimensione ancora pi� grande per le icone */
+	}
+}
+
+@media (min-width: 670px) and (max-width: 768px) {
+	
+.main-wrapper{
+	background-color: transparent !important;
+}
+	
+/* Wrapper per centrare il contenuto */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding:20px;
+  margin: 100px 0;
+  background-color: white; /* Sfondo del container di login */
+  border-radius: 8px;
+  position:relative;
+ 
+}
+
+/* Stile per la sezione di login */
+.login-section {
+  width: 75%;
+  
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white !important; /* Sfondo del container di login */
+  border-radius: 8px;
+  text-align: center; /* Allinea il testo al centro */
+}
+
+	.input-box .icon img {
+  		width: 30px; /* Dimensione ancora pi� grande per le icone */
+  		height: 30px; /* Dimensione ancora pi� grande per le icone */
+	}
+}
+
+}

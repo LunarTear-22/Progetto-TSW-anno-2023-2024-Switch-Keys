@@ -1,0 +1,139 @@
+
+
+h2 {
+    color: #1c0e3a;
+    text-align: center; /* Centra il testo */
+    margin-top:30px !important;
+   
+}
+
+#myForm {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #eae3e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #1c0e3a;
+}
+
+.reset {
+    background-color: #1c0e3a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reset:hover{
+	background-color: #7e1b10;
+}
+
+.hidden { display: none; }
+ 
+ #tecnologie-error {
+    color: red;
+    display: none;
+}  
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form input[type="submit"],
+form input[type="reset"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1em;
+    resize: none;
+}
+
+input.myinput {
+    width: 100% !important;
+    padding: 10px !important;
+    margin-bottom: 5px !important;
+    border: 1px solid #cccccc !important;
+    border-radius: 5px !important;
+    font-size: 1em !important;
+}
+
+select.myselect {
+	width: auto;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+form input[type="submit"],
+form input[type="reset"] {
+    background-color: #1c0e3a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background-color: #7e1b10;
+}
+
+form input[type="checkbox"] {
+    margin: 0 5px 0 0;
+}
+
+/* Link Styling */
+table a {
+    color: #bfc2de;
+    text-decoration: none;
+}
+
+table a:hover {
+    color: #7e1b10;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    form input[type="text"],
+    form input[type="number"],
+    form input[type="file"],
+    form input[type="submit"],
+    form input[type="reset"],
+    form textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em;
+    }
+
+    form label {
+        font-size: 0.8em;
+    }
+}

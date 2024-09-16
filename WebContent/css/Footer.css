@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/* Regole globali */
+* {
+    font-family: 'Reddit Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+body {
+    background-color: #9195c6; /* Colore di sfondo della pagina */
+    color: #1c0e3a; /* Colore del testo principale */
+    
+}
+
+footer {
+    background-color: #1c0e3a;
+    color: #eae3e6;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    width: 80px; /* Larghezza del logo */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 0.9em;
+    margin: 0;
+}

@@ -1,0 +1,469 @@
+* {
+    font-family: 'Reddit Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stili generali */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #9195c6;
+}
+.area-utente-body{
+	min-height:100vh;
+}
+
+.container {
+    max-width: 90%; /* Layout principale per desktop */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2, h3 {
+    color: #1c0e3a;
+    margin-bottom: 20px;
+}
+
+.title {
+    text-align: center;
+    color: #1c0e3a;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.user-details, .section {
+    margin-bottom: 30px;
+}
+
+.section {
+    margin-bottom: 30px;
+    min-height:100vh;
+}
+
+.user-details p, .section label {
+    font-size: 1em;
+    color: #1c0e3a;
+    margin-bottom: 10px;
+}
+
+.section input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.section button {
+    padding: 10px 20px;
+    background-color: #1c0e3a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.section button:hover {
+    background-color: #7e1b10;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+
+
+.button-container .btn, .section .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1c0e3a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.button-container .btn:hover, .section .btn:hover {
+    background-color: #7e1b10;
+}
+
+.address-card, .payment-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.address {
+    margin-bottom: 10px;
+}
+
+.method {
+    margin-bottom: 10px;
+}
+
+.add-address-form, .add-payment-form {
+    margin-top: 20px;
+}
+
+/* Layout per affiancare le sezioni */
+.sections-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sections-container .address-card, .sections-container .add-address-form {
+    flex: 0 0 48%; /* due colonne affiancate */
+    margin-bottom: 20px;
+}
+
+.sections-container .add-address-form {
+    margin-left: 2%;
+}
+
+.sections-container .payment-card, .sections-container .add-payment-form {
+    flex: 0 0 48%; /* due colonne affiancate */
+    margin-bottom: 20px;
+}
+
+.sections-container .add-payment-form {
+    margin-left: 2%;
+}
+
+/* Layout per la sezione principale (ordini e azioni utente) */
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.orders-list {
+    flex: 2;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.order-item {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.order-item h4 {
+    color: #1c0e3a;
+    margin-bottom: 10px;
+}
+
+.order-item p {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.view-order {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #1c0e3a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.view-order:hover {
+    background-color: #7e1b10;
+}
+
+.user-actions {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.User-Area-btn {
+    padding: 10px 20px;
+    background-color: #1c0e3a;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.User-Area-btn:hover {
+    background-color: #7e1b10;
+}
+
+/* Stili per il filtro per data */
+.date-filter-form {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-filter-form label {
+    font-weight: bold;
+    color: #1c0e3a;
+}
+
+.date-filter-form input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 8px 15px;
+    background-color: #1c0e3a;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #7e1b10;
+}
+
+.view-invoice {
+	padding: 8px 15px;
+    background-color: #1c0e3a;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.view-invoice:hover {
+	background-color: #7e1b10;
+}
+
+.btn-container {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.reset-btn{
+	padding: 8px 15px;
+    background-color: #7e1b10;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration:none;
+    font-size: small;   
+}
+
+.reset-btn:hover{
+	background-color: #1c0e3a;
+}
+
+/* Stili per i popup */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    margin: 5% auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #1c0e3a;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.popup-buttons .btn {
+    padding: 10px 20px;
+    background-color: #1c0e3a;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup-buttons .btn:hover {
+    background-color: #7e1b10;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Stile per la visualizzazione della modalità di modifica */
+.address-entry .view-mode {
+    display: inline-block;
+}
+
+.address-entry input[type="text"] {
+    display: inline-block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#tipo {
+    width: auto;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Pulsanti affiancati nelle sezioni "Indirizzi di spedizione" e "Metodi di pagamento" */
+.address-card .button-container, .payment-card .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.address-card .button-container .btn, .payment-card .button-container .btn {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.address-card .button-container .btn:last-child, .payment-card .button-container .btn:last-child {
+    margin-right: 0;
+}
+
+select {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #1c0e3a;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container .btn {
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .sections-container {
+        flex-direction: column;
+    }
+
+    .sections-container .address-card, .sections-container .add-address-form {
+        flex: 1 0 100%; /* una colonna sopra l'altra */
+        margin-left: 0;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .user-actions {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .orders-list, .user-actions {
+        flex: 1 0 100%;
+    }
+
+    /* Mantieni i pulsanti affiancati nelle card di indirizzi e pagamenti */
+    .address-card .button-container, .payment-card .button-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .address-card .button-container .btn, .payment-card .button-container .btn {
+        flex: 1;
+        margin-bottom: 10px;
+        width: 48%; /* Mantieni i pulsanti affiancati, ciascuno occupa metà larghezza */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .button-container .btn {
+        padding: 8px 16px;
+    }
+
+    /* Adattamento per schermi molto piccoli */
+    .address-card .button-container .btn, .payment-card .button-container .btn {
+        flex: 1;
+        margin-bottom: 10px;
+        width: 100%; /* Nei dispositivi molto piccoli, pulsanti uno sotto l'altro */
+    }
+}

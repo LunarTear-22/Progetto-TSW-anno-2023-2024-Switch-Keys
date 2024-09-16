@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+/* Stili generali */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9195c6;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-container {
+    text-align: center;
+    padding: 50px 150px;
+    background-color: #eae3e6; /* Sfondo del container */
+    border-radius: 10px;
+    max-width: 1000px; /* Aumentata la larghezza massima */
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+h1 {
+    color: #1c0e3a;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-button {
+    display: block; /* Cambiato da inline-block a block */
+    margin: 10px 0;
+    padding: 15px 0; /* Rimosso padding orizzontale */
+    width: 200px; /* Imposta una larghezza fissa per tutti i bottoni */
+    background-color: #1c0e3a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    border: 2px solid #1c0e3a; /* Bordo dei bottoni */
+    transition: background-color 0.3s, border-color 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dashboard-button:hover {
+    background-color: #7e1b10;
+    border-color: #d5d2d3; /* Cambio colore del bordo al passaggio del mouse */
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .dashboard-container {
+        padding: 40px 100px;
+        margin: 40px auto;
+        max-width: 90%; /* Adattamento per schermi più piccoli */
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+
+    .dashboard-button {
+        font-size: 1.1em;
+        width: 180px; /* Adatta la larghezza per schermi più piccoli */
+    }
+}
+
+@media (max-width: 540px) {
+    .dashboard-container {
+        padding: 30px 15px;
+        margin: 30px auto;
+        max-width: 90%; /* Adattamento per schermi più piccoli */
+    }
+
+    h1 {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+    }
+
+    .dashboard-button {
+        font-size: 1em;
+        width: 160px; /* Adatta la larghezza per schermi più piccoli */
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-container {
+        padding: 20px 10px;
+        margin: 20px auto;
+        max-width: 90%; /* Adattamento per schermi più piccoli */
+    }
+
+    h1 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    .dashboard-button {
+        font-size: 0.9em;
+        width: 140px; /* Adatta la larghezza per schermi più piccoli */
+    }
+}

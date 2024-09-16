@@ -1,0 +1,385 @@
+/* Import dei font da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Regole globali */
+* {
+    font-family: 'Reddit Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100vh;
+}
+
+/* Stile per il container del carrello */
+.cart-container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #9195c6;
+    min-height: 100vh;
+    padding-top: 10px;
+}
+
+.carrello_vuoto {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cart-table {
+    margin-top: 10px;
+    padding: 10px;
+    min-height: 100px;
+}
+
+/* Stile per la sezione degli articoli del carrello */
+.cart-items {
+    margin-bottom: 10px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Angoli stondati per la tabella */
+    overflow: hidden; /* Per assicurarsi che i bordi rimangano stondati */
+    background-color: #ffffff;
+}
+
+.cart-table th, .cart-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-table th {
+    background-color: #1C0E3A;
+    color: #BFC2DE;
+}
+
+.cart-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.product-name {
+    font-size: 1.0em;
+    color: #1c0e3a;
+    line-height: 1.2;
+    height: 3em; /* Limita l'altezza a due righe */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Mostra massimo due righe */
+    -webkit-box-orient: vertical;
+    padding-top: 0.6em;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #1C0E3A;
+    color: #BFC2DE;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+ 
+ [id^="quantity-btn-disabled-"] {
+ 	
+ 	width: 30px;
+    height: 30px;
+    background-color: #cccccc;
+    color: #666666;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; 
+    cursor: not-allowed;
+    text-decoration: line-through; /* Opzionale: barrato per ulteriore evidenza */
+}
+
+.quantity-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    margin: 0 5px;
+    border-radius: 5px; /* Angoli stondati per l'input di quantità */
+    pointer-events: none;
+}
+
+.remove-btn {
+    background-color: #7e1b10;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Angoli stondati per il pulsante elimina */
+    text-decoration: none;
+}
+
+/* Impedisce che il simbolo € vada a capo */
+.price-container {
+    white-space: nowrap;
+}
+
+/* Stile per la sezione del riepilogo del carrello */
+.cart-summary {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Angoli stondati per il riepilogo del carrello */
+    margin-top: 50px;
+    height: fit-content;
+    margin-left: 10px;
+}
+
+.cart-summary h3, .cart-summary h4 {
+    margin-bottom: 20px;
+}
+
+.cart-summary p {
+    margin-bottom: 10px;
+}
+
+.checkout-btn {
+    width: 100%;
+    background-color: #1C0E3A;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Angoli stondati per il pulsante di checkout */
+    margin-top: 20px;
+}
+
+.checkout-btn:hover {
+    background-color: #7e1b10;
+}
+
+/* Media queries per schermi piccoli (smartphone) */
+@media (max-width: 600px) {
+    .cart-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .cart-items, .cart-summary {
+        margin: 0;
+        width: 100%;
+    }
+
+    .cart-table th, .cart-table td {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .cart-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .quantity-btn {
+        width: 25px;
+        height: 25px;
+    }
+
+    .quantity-input {
+        width: 30px;
+        font-size: 14px;
+    }
+
+    .remove-btn {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .checkout-btn {
+        padding: 8px 15px;
+    }
+
+    .cart-summary h3 {
+        font-size: 18px;
+    }
+
+    .cart-summary p {
+        font-size: 14px;
+    }
+}
+
+/* Media queries per schermi medi (tablet) */
+@media (min-width: 601px) and (max-width: 875px) {
+    .cart-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .cart-items, .cart-summary {
+        width: 100%;
+        margin: 0;
+    }
+
+    .cart-table th, .cart-table td {
+        padding: 8px;
+    }
+
+    .quantity-btn {
+        width: 28px;
+        height: 28px;
+    }
+
+    .quantity-input {
+        width: 35px;
+    }
+
+    .remove-btn {
+        padding: 5px 8px;
+    }
+
+    .checkout-btn {
+        padding: 9px 18px;
+    }
+
+    .cart-summary h3 {
+        font-size: 20px;
+    }
+
+    .cart-summary p {
+        font-size: 16px;
+    }
+}
+
+/* Media queries per schermi molto piccoli (sotto i 400px) */
+@media (max-width: 400px) {
+    .cart-table {
+        font-size: 12px; /* Ridotto per migliorare la leggibilità su schermi piccoli */
+    }
+
+    .cart-table th, .cart-table td {
+        padding: 4px; /* Ridotto per adattarsi meglio */
+    }
+
+    .cart-image {
+        width: 50px; /* Ridotto rispetto ai 70px sugli schermi piccoli */
+        height: 50px; /* Ridotto rispetto ai 70px sugli schermi piccoli */
+    }
+
+    .quantity-btn {
+        width: 18px; /* Ridotto rispetto ai 20px sugli schermi piccoli */
+        height: 18px; /* Ridotto rispetto ai 20px sugli schermi piccoli */
+        font-size: 10px; /* Font-size ridotto per il testo nei pulsanti */
+    }
+
+    .quantity-input {
+        width: 28px;
+        font-size: 12px; /* Font-size ridotto per adattarsi meglio */
+    }
+
+    .remove-btn {
+        padding: 3px 6px; /* Ridotto rispetto ai 4px 8px sugli schermi piccoli */
+        font-size: 10px; /* Font-size ridotto per il testo nei pulsanti */
+    }
+
+    .checkout-btn {
+        padding: 6px 12px; /* Ridotto per adattarsi meglio agli schermi molto piccoli */
+    }
+
+    .cart-summary h3 {
+        font-size: 16px; /* Ridotto per adattarsi meglio */
+    }
+
+    .cart-summary p {
+        font-size: 12px; /* Ridotto per adattarsi meglio */
+    }
+}
+
+/* Media queries per schermi molto molto piccoli (sotto i 355px) */
+@media (max-width: 355px) {
+    .cart-table {
+        font-size: 10px; /* Ulteriormente ridotto per migliorare la leggibilità su schermi molto piccoli */
+    }
+
+    .cart-table th, .cart-table td {
+        padding: 3px; /* Ridotto ulteriormente per adattarsi meglio */
+    }
+
+    .cart-image {
+        width: 40px; /* Ridotto rispetto ai 50px sugli schermi molto piccoli */
+        height: 40px; /* Ridotto rispetto ai 50px sugli schermi molto piccoli */
+    }
+
+    .quantity-btn {
+        width: 16px; /* Ridotto rispetto ai 18px sugli schermi molto piccoli */
+        height: 16px; /* Ridotto rispetto ai 18px sugli schermi molto piccoli */
+        font-size: 8px; /* Font-size ridotto per il testo nei pulsanti */
+    }
+
+    .quantity-input {
+        width: 24px; /* Ridotto rispetto ai 28px sugli schermi molto piccoli */
+        font-size: 10px; /* Font-size ridotto per adattarsi meglio */
+    }
+
+    .remove-btn {
+        padding: 2px 4px; /* Ridotto rispetto ai 3px 6px sugli schermi molto piccoli */
+        font-size: 8px; /* Font-size ridotto per il testo nei pulsanti */
+    }
+
+    .checkout-btn {
+        padding: 4px 8px; /* Ridotto per adattarsi meglio agli schermi molto piccoli */
+    }
+
+    .cart-summary h3 {
+        font-size: 14px; /* Ridotto per adattarsi meglio */
+    }
+
+    .cart-summary p {
+        font-size: 10px; /* Ridotto per adattarsi meglio */
+    }
+}
+
+/* Media queries per schermi grandi (desktop) */
+@media (min-width: 876px) {
+    .cart-container {
+        padding: 20px;
+        flex-direction: row;
+    }
+
+    .cart-items {
+        flex: 3;
+    }
+
+    .cart-summary {
+        flex: 1;
+        margin-left: 20px;
+    }
+
+    .cart-table th, .cart-table td {
+        padding: 10px;
+    }
+
+    .quantity-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .quantity-input {
+        width: 40px;
+    }
+
+    .remove-btn {
+        padding: 5px 10px;
+    }
+
+    .checkout-btn {
+        padding: 10px 20px;
+    }
+}

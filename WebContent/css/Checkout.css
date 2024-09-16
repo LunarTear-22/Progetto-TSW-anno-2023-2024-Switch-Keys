@@ -1,0 +1,443 @@
+/* Resetta le impostazioni di default per tutti gli elementi */
+* {
+    font-family: 'Reddit Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stili generali */
+body {
+    background-color: #9195c6;
+}
+
+.checkout_body{
+	min-height:100vh;
+}
+
+.checkout-title {
+	text-align: center;
+	margin-top: 10px;
+	
+}
+
+/* Contenitore principale del checkout */
+.checkout-container {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display:flex;
+}
+
+/* Stile delle intestazioni */
+h2{
+    color: #1c0e3a;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size:26px;
+}
+
+h3{
+	font-size: 22px;
+    color: #1c0e3a;
+    margin-bottom: 5px;
+    text-align: left;	
+}
+
+
+/* Stili per le sezioni */
+.shipping-address, .payment-methods, .order-summary {
+    margin-bottom: 30px;
+}
+
+/* Stile per i label */
+label {
+    font-size: 1.1em;
+    color: #1c0e3a;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Input, Select, e Textarea */
+input[type="text"], input[type="email"], input[type="number"], input[type="date"], input[type="password"], input[type="tel"], select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
+    resize: vertical;
+}
+
+/* Stile per i radio button */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Specifico per il select del popup di pagamento */
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Riepilogo ordine */
+.order-summary p, .order-summary ul li {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Rimozione punti elenco */
+.order-summary ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.order-summary p strong, .order-summary ul li strong {
+    color: #1c0e3a;
+}
+.conferma_ordine {
+    width: 27%;
+}
+
+.Estremi_ordine {
+    width: 70%;
+    margin-right: 5%;
+}
+
+.estremo_selezionato_vuoto{
+	margin-bottom: 10px;
+}
+
+/* Stile per nascondere le sezioni */
+ .hidden {
+       display: none;
+   }
+
+   /* Stile per i bottoni */
+   .toggle-btn {
+       background-color: #1c0e3a;
+       color: white;
+       padding: 10px 20px;
+       margin: 10px 0;
+       border: none;
+       cursor: pointer;
+       font-size: 16px;
+       border-radius: 5px;
+       width: 100%;
+       text-align: left;
+   }
+
+   .toggle-btn:hover {
+       background-color: #7e1b10;
+   }
+
+   .toggle-icon {
+       float: right;
+       font-size: 15px;
+       line-height: 15px;
+       transition: transform 0.2s ease;
+   }
+
+   .toggle-icon.rotated {
+       transform: rotate(180deg);
+   }
+
+/* Stile generico per i bottoni */
+button, .btn {
+    padding: 10px 20px;
+    background-color: #1c0e3a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+button:hover, .btn:hover {
+    background-color: #7e1b10;
+}
+
+
+.add_estremo{
+    color: #1c0e3a;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+.add_estremo:hover {
+    color: #7e1b10;
+}
+
+.estremi_assenti{
+	margin-bottom:5px;
+}
+
+#error-message {
+    color: red;
+    font-weight: bold;
+    padding-top:5px;
+}
+
+
+
+/* CSS per l'overlay e il popup */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    
+}
+
+.popup {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    position: relative;
+}
+.form_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+}
+
+/* Titoli del popup */
+.popup h3 {
+    margin-top: 0;
+    color: #1c0e3a;
+}
+
+/* Bottone di chiusura del popup */
+.close-btn {
+    background-color: #7e1b10;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    text-align: center;
+}
+
+/* Layout a due colonne per i campi nei popup */
+.add-address-form label, .add-payment-form label {
+    display: block;
+    margin-top: 15px;
+}
+
+.add-address-form input, .add-payment-form input, .add-address-form select, .add-payment-form select {
+    margin-bottom: 10px;
+    width: calc(100% - 10px);
+    float: left;
+    margin-right: 10px;
+}
+
+/* Clear fix per form */
+.add-address-form::after, .add-payment-form::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Stili per le entry di indirizzo e pagamento */
+.address-entry, .payment-entry {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    display:flex;
+}
+
+.radio_container{
+	align-self:center;
+}
+.address-entry p, .payment-entry label {
+    color: #333;
+    font-size: 1.1em;
+    font-weight:normal;
+}
+
+.address-entry strong, .payment-entry strong {
+    color: #1c0e3a;
+}
+
+/* Stili per le immagini nel riepilogo ordine */
+.cart-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+/* Riepilogo ordine con informazioni prodotto accanto all'immagine */
+.cart-summary-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart-summary-list li span {
+    margin-right: 10px;
+}
+
+.cart-summary-list li strong {
+    color: #1c0e3a;
+}
+
+/* Stili per l'overlay di conferma */
+.confirmation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Nascondi per default */
+    justify-content: center;
+    align-items: center;
+    z-index: 9998; /* Deve essere sotto il popup di conferma */
+}
+
+.confirmation-popup {
+    display: none;
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    z-index: 10000;
+    width: 30%;
+}
+
+.confirmation-popup.active {
+    display: block;
+}
+
+.confirmation-popup h2 {
+    margin: 0;
+    color: #7e1b10;
+}
+
+.confirmation-popup p {
+    margin: 10px 0;
+}
+
+.confirmation-popup button {
+    background-color: #1c0e3a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+.confirmation-popup button.home {
+    background-color: #1c0e3a;
+    margin-top: 10px;
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+.confirmation-popup button.home:hover {
+    background-color: #7e1b10;
+}
+
+.link-to-page{
+	text-decoration: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
+/* Stili responsivi */
+@media (max-width: 768px) {
+    .checkout-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    button.confirm-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .popup {
+        width: 90%;
+    }
+
+    .add-address-form input, .add-payment-form input, .add-address-form select, .add-payment-form select {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .cart-summary-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+	
+
+@media (max-width: 480px) {
+    .checkout-container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    button.confirm-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .popup {
+        width: 100%;
+    }
+}

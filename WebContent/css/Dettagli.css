@@ -1,0 +1,122 @@
+/* Regole globali */
+* {
+    font-family: 'Reddit Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background-color: #9195c6; /* Colore di sfondo della pagina */
+    color: #1c0e3a; /* Colore del testo principale */
+    
+   
+}
+
+.details-body {
+	min-height: 100vh;
+}
+
+.product-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 95%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    flex: 1 1 40%;
+    padding: 20px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-info {
+    flex: 1 1 60%;
+    padding: 20px;
+}
+
+.product-info h2 {
+    color: #1c0e3a;
+}
+
+.product-info p {
+    color: #333333;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Dettagli.css */
+
+/* Styling per il link "Aggiungi al carrello" */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1c0e3a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #7e1b10;
+}
+
+.cta-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.prodotto-non-esistente{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.prodotto-non-esistente p{
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-details-container {
+        flex-direction: column;
+    }
+
+    .product-image, .product-info {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-info h2 {
+        font-size: 1.5em;
+    }
+
+    .product-info p {
+        font-size: 1em;
+    }
+}

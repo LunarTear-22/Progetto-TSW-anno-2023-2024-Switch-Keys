@@ -1,0 +1,407 @@
+/* Reset dei margini e dei padding per il layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #9195c6; /* Sfondo della pagina */
+  color: #1c0e3a; /* Colore del testo principale */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#email:focus {
+    outline: none;
+    border: 2px solid #BFC2DE;
+    background-color: #6368ad26;
+
+}
+
+#nome:focus {
+    outline: none;
+    border: 2px solid #BFC2DE;
+    background-color: #6368ad26;
+}
+
+#cognome:focus {
+    outline: none;
+    border: 2px solid #BFC2DE;
+    background-color: #6368ad26;
+}
+
+#password:focus {
+    outline: none;
+    border: 2px solid #BFC2DE;
+    background-color: #6368ad26;
+}
+
+
+/* Wrapper per centrare il contenuto */
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Wrapper per centrare il contenuto */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px 40px;
+  margin: 70px 0;
+  background-color: #ffffff; /* Sfondo del container di registrazione */
+  border-radius: 8px;
+  position: relative;
+}
+
+.container {
+  display: block; /* Mostra il container su desktop */
+  margin-right: 40px;
+  position: relative;
+  top: 180px;
+
+}
+
+/* Stile per il logo nella parte superiore */
+.text-logo {
+  color: #7e1b10; /* Colore del logo */
+  font-size: 2rem; /* Dimensione del logo */
+  text-align: center; /* Allinea il testo al centro */
+}
+
+/* Stile per la sezione di registrazione */
+.register-section {
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white; /* Sfondo del container di registrazione */
+  border-radius: 8px;
+  text-align: center; /* Allinea il testo al centro */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+/* Stile per il titolo "Registrati" */
+.register-section h2 {
+  color: #1c0e3a;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center; /* Allinea il testo al centro */
+}
+
+.form-box_register{
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#registrationForm{
+	display: flex;
+	justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* Stile per le caselle di input */
+.input-box {	
+  min-height:80px;
+  text-align: left;
+}
+
+.input-box-pass {	
+  min-height:120px;
+  text-align: left; 
+}
+
+.input-icon {
+    width: 40px;
+    height: auto;
+    display: flex;
+    align-self: center;
+    flex-basis: fit-content;
+    align-items: center;
+}
+
+.input-container{
+	width: 100%;
+	display: flex;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;	
+}
+
+/* Casella di input e icona */
+.input-container input {
+  width: 100%;
+  padding: 16px 40px 16px 15px; /* Aumenta il padding per lasciare spazio per l'icona */
+  border: 1px solid #bfc2de; /* Bordo dei campi di testo */
+  border-radius: 5px;
+  background-color: #ffffff; /* Sfondo dei campi di testo */
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-container img {
+  width: 24px; /* Dimensione dell'icona */
+  height: 24px; /* Dimensione dell'icona */
+  position: absolute;
+  left: 90%;
+  
+  pointer-events: none; /* Impedisce che l'icona riceva eventi di clic */
+}
+
+/* Spazio riservato per il messaggio di errore per evitare lo spostamento dell'icona */
+.input-box .error-message {
+  color: red;
+  font-size: 0.7em;
+  margin: 0.5em 0;
+  height: auto; /* Rimuovi altezza fissa per adattarsi al contenuto */
+  display: block; /* Assicurati che sia un blocco per riservare spazio */
+  position: relative;
+  text-align: left;
+}
+
+.input-box-pass .error-message {
+  color: red;
+  font-size: 0.7em;
+  margin: 0.2em 0;
+  height: auto; /* Rimuovi altezza fissa per adattarsi al contenuto */
+  display: block; /* Assicurati che sia un blocco per riservare spazio */
+  position: relative;
+  text-align: left;
+}
+
+/* Stile per il bottone Accedi */
+.btn {
+  background-color: #1c0e3a; /* Colore di sfondo del bottone */
+  color: #ffffff; /* Colore del testo del bottone */
+  border: none;
+  padding: 16px 32px; /* Aumenta il padding per adattarsi alle icone più grandi */
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.btn:hover {
+  background-color: #7e1b10; /* Cambia colore al passaggio del mouse */
+}
+
+/* Stile per il link per creare un nuovo account */
+.create-account {
+  margin-top: 10px;
+  text-align: center; /* Allinea il testo al centro */
+}
+
+.create-account p {
+  color: #1c0e3a;
+}
+
+.create-account a {
+  color: #1c0e3a;
+  text-decoration: underline;
+  font-weight: bold; /* Rendi il testo in grassetto */
+}
+
+.create-account a:hover {
+  color: #7e1b10;
+}
+
+/* Stile per il popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+}
+
+.popup-content button {
+  background-color: #1c0e3a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top:10px;
+}
+
+.popup-content button:hover {
+  background-color: #7e1b10;
+}
+
+.close {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  color: #aaa;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Stili per la sezione dei messaggi di errore */
+.error-message {
+  color: red;
+  font-size: 0.875em;
+  margin-bottom: 0.5em;
+  height: auto; /* Rimuovi altezza fissa per adattarsi al contenuto */
+  display: block; /* Assicurati che sia un blocco per riservare spazio */
+  position: relative;
+  
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: red;
+  font-size: 0.875em;
+}
+
+@media (max-width: 430px) {
+  .main-wrapper {
+    background-color: transparent !important;
+  }
+  
+  /* Wrapper per centrare il contenuto */
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 20px 0;
+    background-color: transparent; /* Sfondo del container di registrazione */
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .container {
+    display: none; /* Mostra il container su desktop */
+  }
+
+  /* Stile per la sezione di registrazione */
+  .register-section {
+    max-width: 270px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white !important; /* Sfondo del container di registrazione */
+    border-radius: 8px;
+    text-align: center; /* Allinea il testo al centro */
+  }
+
+  .input-box .icon img {
+    width: 30px; /* Dimensione ancora più grande per le icone */
+    height: 30px; /* Dimensione ancora più grande per le icone */
+  }
+}
+
+@media (min-width: 430px) and (max-width: 669px) {
+  .main-wrapper {
+    background-color: transparent !important;
+  }
+  
+  /* Wrapper per centrare il contenuto */
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: transparent; /* Sfondo del container di registrazione */
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .container {
+    display: none; /* Mostra il container su desktop */
+  }
+
+  /* Stile per la sezione di registrazione */
+  .register-section {
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white !important; /* Sfondo del container di registrazione */
+    border-radius: 8px;
+    text-align: center; /* Allinea il testo al centro */
+  }
+
+  .input-box .icon img {
+    width: 30px; /* Dimensione ancora più grande per le icone */
+    height: 30px; /* Dimensione ancora più grande per le icone */
+  }
+}
+
+@media (min-width: 670px) and (max-width: 768px) {
+  .main-wrapper {
+    background-color: transparent !important;
+  }
+  
+  /* Wrapper per centrare il contenuto */
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 20px;
+    margin: 100px 0;
+    background-color: white; /* Sfondo del container di registrazione */
+    border-radius: 8px;
+    position: relative;
+  }
+
+  /* Stile per la sezione di registrazione */
+  .register-section {
+    width: 350px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white !important; /* Sfondo del container di registrazione */
+    border-radius: 8px;
+    text-align: center; /* Allinea il testo al centro */
+  }
+
+  .input-box .icon img {
+    width: 30px; /* Dimensione ancora più grande per le icone */
+    height: 30px; /* Dimensione ancora più grande per le icone */
+  }
+}
